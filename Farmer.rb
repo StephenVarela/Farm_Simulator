@@ -1,5 +1,6 @@
 
-require './Field.rb'
+require './CornField.rb'
+require './WheatField.rb'
 ##Testing
 
 class Farm_Simulator
@@ -11,7 +12,7 @@ class Farm_Simulator
   end
 
   def display_ui
-    #puts "\e[H\e[2J"
+    puts "\e[H\e[2J"
     puts "----------------"
     puts "field -> adds a new field"
     puts "harvest -> harvests crops and adds to total harvested"
@@ -30,8 +31,11 @@ class Farm_Simulator
     elsif(user_input == "relax")
       relax
     elsif(user_input == "exit")
+      puts "\e[H\e[2J"
       exit 0
     end
+    puts "Press enter key to continue"
+    gets
   end
 
   def field
